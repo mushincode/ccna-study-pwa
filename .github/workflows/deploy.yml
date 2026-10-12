@@ -1,0 +1,47 @@
+name: Deploy CCNA PWA
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble static PWA
+        run: |
+          mkdir -p _site
+          unzip -q pwa-app.zip -d _site
+          unzip -q pwa-images-1.zip -d _site
+          unzip -q pwa-images-2.zip -d _site
+          python3 - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('_site')
+          bank = json.loads((root / 'questions.json').read_text())
+          assert len(bank) == 1395
+          assert (root / 'index.html').exists()
+          for q in bank:
+              for v in [q.get('visual'), *q.get('media', []), *q.get('answerMedia', []), *q.get('options', [])]:
+                  if v and v.get('image'):
+                      assert (root / v['image']).is_file(), v['image']
+          assert not list(root.rglob('progress.json'))
+          assert not list(root.rglob('*.pdf'))
+          print('Validated 1395 questions and their image assets; no learner records or PDFs.')
+          PY
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

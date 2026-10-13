@@ -1,9 +1,11 @@
 {
   "total": 1395,
-  "reviewed": 397,
-  "scored": 310,
-  "pending": 998,
-  "ankiCards": 358,
-  "version": "980dc9be80d7",
-  "recordsStorage": "browser-only"
+  "reviewed": 517,
+  "scored": 417,
+  "pending": 878,
+  "ankiCards": 465,
+  "version": "d62e9796650c",
+  "recordsStorage": "browser-only",
+  "scheduleEnabled": false,
+  "codexReminders": "deleted"
 }

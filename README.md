@@ -6,9 +6,11 @@ English questions with available Traditional Chinese translations and selectable
 
 ## Current content
 
-The published snapshot contains 1,395 questions from the user's supplied PDFs and their image assets. 397 questions have completed individual review; 310 have independently checked, unambiguous answers suitable for scoring. The remaining translations and explanations are still being reviewed. Defective or pending questions are excluded from scored mock exams. This is a practice bank, not an official Cisco exam or a passing-score prediction.
+The published snapshot contains 1,395 questions from the user's supplied PDFs and their image assets. 517 questions have completed individual review; 417 have independently checked, unambiguous answers suitable for scoring. The remaining translations and explanations are still being reviewed. Defective or pending questions are excluded from scored mock exams. This is a practice bank, not an official Cisco exam or a passing-score prediction.
 
-The Anki download contains 358 cards: 48 existing concept cards and 310 independently reviewed question cards. Completed question reviews and batch fingerprints are tracked locally to avoid regenerating finished work.
+The Anki download contains 465 cards: 48 existing concept cards and 417 independently reviewed question cards. Completed question reviews and batch fingerprints are tracked locally to avoid regenerating finished work.
+
+Daily scheduling, session-time settings and monthly timetables have been removed at the user's request. All four CCNA Codex reminders have been deleted. The home page now opens practice selection.
 
 ## Install and save progress
 
@@ -26,6 +28,6 @@ The three release archives contain the static app/question JSON and two sets of 
 
 ## 繁體中文
 
-共 1,395 題及圖片；目前 397 題完成逐題核對，310 題可計分。其餘中文與解析仍在處理；待核實或有瑕疵題目不計入模擬測驗。
+共 1,395 題及圖片；目前 517 題完成逐題核對，417 題可計分。其餘中文與解析仍在處理；待核實或有瑕疵題目不計入模擬測驗。
 
 答案與設定儲存在目前瀏覽器；可在學習設定匯出／匯入備份以移至其他裝置。此版本沒有自動跨裝置同步。iPhone 可在 Safari 分享選單選擇「加入主畫面」，Mac 可選「加入 Dock」。

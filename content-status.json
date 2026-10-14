@@ -1,10 +1,10 @@
 {
   "total": 1395,
-  "reviewed": 806,
-  "scored": 670,
-  "pending": 589,
-  "ankiCards": 718,
-  "version": "4dabb4dc70a4",
+  "reviewed": 915,
+  "scored": 774,
+  "pending": 480,
+  "ankiCards": 822,
+  "version": "7a327bd5c20a",
   "recordsStorage": "browser-only",
   "scheduleEnabled": false,
   "codexReminders": "deleted"
